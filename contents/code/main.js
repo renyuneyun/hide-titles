@@ -19,7 +19,6 @@ workspace.clientAdded.connect(function(client) {
         var area = workspace.clientArea(KWin.MaximizeArea, client);
         var isMaximized = client.width >= area.width && client.height >= area.height;
         
-        csd.eval(client);
         client.noBorder = client.noBorder || isMaximized;
     }
 });
